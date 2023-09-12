@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins, sans-serif';
+    
+}
+.container{
+    background-color: #24252A;
+    animation: transistionin 3s;
+}
+@keyframes transistionin{
+    from{
+     opacity: 0;
+     transform: translateY(-10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    padding:0 8;
+    background-image: url(https://img.freepik.com/premium-photo/3d-rendering-black-dumbbells-floor-dark-concept-fitness-room-with-training-equipments-back_67155-14961.jpg?w=2000);
+    background-position: center;
+    background-size: cover;
+}
+.container h1{
+    text-align: center;
+    padding-top: 5%;
+    margin-bottom: 80px;
+    font-weight: 600;
+    position: relative;
+    font-size: 60px;
+}
+.container h1::after{
+    content: '';
+    background: rgb(0, 0, 0);
+    width: 240px;
+    height: 3px;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1px));
+    grid-gap: 30px;
+}
+.service{
+    text-align: center;
+    padding: 25px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    background: transparent;
+    transition: transform 0.5s, background 0.5s;
+}
+.service i{
+    font-size: 40px;
+    margin-bottom: 10px;
+    color:rgb(194, 189, 189);
+
+}
+.service h2{
+    font-weight: 600; 
+    margin-bottom: 8px ;
+}
+.service:hover{
+    background:black;
+    color: #0088a9;
+    transform: scale(1.05);
+}
+.service:hover i{
+    color: #0088a9;
+}
+p{
+    color:white;
+}
+h2{
+    color: #fff
+}

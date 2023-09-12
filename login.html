@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="login.css" rel="stylesheet">
+    </head>
+    <div class="hero">
+        <div class="popup" id="popup">
+            <img src="https://e7.pngegg.com/pngimages/341/867/png-clipart-white-check-with-green-background-illustration-fingerprint-comcast-circle-symbol-technology-tick-miscellaneous-angle.png">
+            <h2>Thank You!</h2>
+             <p> You Details has Been Successfully Submitted.Thanks!</p>
+             <button type="button" onclick="closepopup();openform()">OK</button>
+        </div>
+        <div class="form-box" id="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="togle-btn" onclick="login()">LOG-IN</button>
+                <button type="button" class="togle-btn" onclick="register()">REGISTER</button>
+            </div>
+            <div class="social-icons">
+                <img src="fb.png">
+                <img src="tw.png">
+                <img src="gp.png">
+    
+            </div>
+            <form id="login" class="input-group">
+                <input id="user" type="text" class="input-field" placeholder="user-id" required autocomplete="off">
+                <input id="password" type="password" class="input-field" placeholder="password" required>
+                <input type="checkbox" class="check-box"> <span>Remember Password</span>
+                <button type="submit" class="submit-btn" ondblclick="openpopup();closeform();">LOG-IN</button>
+            </form>
+            <form id="register" class="input-group">
+                <input id="id" type="text" class="input-field" placeholder="user-id" required autocomplete="off">
+                <input id="email-id" type="email" class="input-field" placeholder="email-id" required>
+                <input id="pass" type="password" class="input-field" placeholder="password" required>
+                <input id="check" type="checkbox" class="check-box"required> <span>I agree To The Terms and  & conditons</span>
+                <button type="submit" class="submit-btn" ondblclick="openpopup();closeform();">REGISTER</button>
+            </form>
+        </div>  
+    </div>  
+    <script>
+        var x=document.getElementById("login");
+        var y= document.getElementById("register");
+        var z=document.getElementById("btn")
+        function register(){
+            x.style.left="-400px";
+            y.style.left="50px";
+            z.style.left="110px";
+        }
+        function login(){
+            x.style.left="50px";
+            y.style.left="450px";
+            z.style.left=" 0px";
+        }
+</script>
+<script>
+
+     /*function empty(){
+        var myTextField=document.getElementById('user');
+        if (myTextField.value=="")
+        alert("Please Enter username")
+     }
+     function empty(){
+        var myTextField1=document.getElementById('password');
+        if (myTextField.value=="")
+        alert("Please Enter Password")
+     }
+     function notempty(){
+        var myTextField=document.getElementById('user');
+        if (myTextField.value!="")
+        alert("LOGIN SUCCESS")
+     }
+     /*function notempty(){
+        var myTextField1=document.getElementById('password');
+        if (myTextField.value=="")
+        alert("success")
+     }
+     /*function empty(){
+        var myTextField=document.getElementById('id');
+        if (myTextField.value=="")
+        alert("Please Enter username")
+     }
+     function notempty(){
+        var myTextField=document.getElementById('user-id');
+        if (myTextField.value!="")
+        alert("LOGIN SUCCESS")
+     }/*        
+     function empty(){
+        var myTextField=document.getElementById('email-id');
+        if (myTextField.value=="")
+        alert("Please Enter Email")
+     }
+     function notempty(){
+        var myTextField=document.getElementById('email-id');
+        if (myTextField.value=="")
+        alert("LOGIN SUCCESS")
+     }
+     function empty(){
+        var myTextField=document.getElementById('pass');
+        if (myTextField.value=="")
+        alert("PLEASE ENTER PASSWORD")
+     }
+     function notempty(){
+        var myTextField=document.getElementById('pass');
+        if (myTextField.value=="")
+        alert("LOGIN SUCCESS")
+     }
+     function empty(){
+        var myTextField=document.getElementById('check');
+        if (myTextField.value=="")
+        alert("PLEASE CHECK THE TERMS&CONDITONS")
+     }
+     function notempty(){
+        var myTextField=document.getElementById('email-id');
+        if (myTextField.value=="")
+        alert("LOGIN SUCCESS")
+     }*/ 
+        let popup=document.getElementById("popup");
+        function openpopup(){
+            popup.classList.add("open-popup");
+        }
+        function closepopup(){
+            popup.classList.remove("open-popup");
+        }
+        let form=document.getElementById("form-box");
+        function openform(){
+            form.classList.remove("close-form");
+        }
+        function closeform(){
+            form.classList.add("close-form");
+        } 
+    </script>
+</html>
