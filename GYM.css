@@ -1,427 +1,128 @@
-html{
+/* Common styles for all screen sizes */
+html {
     scroll-behavior: smooth;
 }
-header{
-    position: sticky;
-    top: 0px;
-    z-index: 3;
-    height: 100px;
-}
-body{
+
+body {
     background-color: #24252A;
     animation: transistionin 3s;
-}
-@keyframes transistionin{
-    from{
-     opacity: 0;
-     transform: translateY(-10px);
-    }
-    to{
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-*{
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  background-color: #24252A;
-}
-li, a, button{
+    margin: 0;
+    padding: 0;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 16px;
     color: #edf0f1;
     text-decoration: none;
 }
-header{
+
+@keyframes transistionin {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 30px 10px;
 }
-.logo{
+
+.logo {
     cursor: pointer;
     width: 150px;
-    height: 10  0px;
+    height: 100px; /* Fixed height */
     padding-left: 10px;
-
 }
-.nav__links{
+
+.nav__links {
     list-style: none;
+    display: flex;
+    margin-right: 10px;
 }
-.nav__links li{
-    display: inline-block;
-    padding: 0px 20px;
-}
-.nav__links li a{
-    transition: all 0.3s ease 0s;
 
+.nav__links li {
+    margin-right: 20px;
 }
-.nav__links li a:hover{
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
     color: #0088a9;
 }
-button{
+
+button {
     padding: 9px 25px;
-    background-color: rgba(1,136,169,1);
+    background-color: rgba(1, 136, 169, 1);
     border: none;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
 }
-button:hover{
-    background-color: rgba(0,136,169,0.8);
-}
-/*
-.image{
-    margin: 10px;
-}
-.line1{
-    background-color: #24252A;
-    height: 5px;
-    width: 50%;
-    color: #24252A;
-    left: 1000px;
-    position: relative;
-}
-*/
-#carouselExampleSlidesOnly{
-    margin-bottom: 40px;
-}
-.maincontent{
-    margin-bottom: 90px;
-    margin-left: 60px;
-}
-.rightcontent{
-    padding-bottom: 30px;
-    margin-left: 30px;
-    margin-right: 20px;
-    margin-bottom: 30px;
-    font-family:'Times New Roman', Times, serif;
-    font-size: 20px;
-    top: 600px;
-    left: 55%;
-    color: white;
-    margin-top: 0%;
-    float: left;
-    width: 40%;
-    background-color: #24252A;
-}
-.right-menu{
-    position: relative;
-    display: inline-block;
-    font-size: xx-large;
-}
-.menu-button{
-    background-color: transparent;
-    cursor: pointer;
-}
-.dropdown-menu{
-    display: none;
-    position: absolute;
-    background-color:transparent;
-    min-width:158px;
-    min-height: 200px;
-    font-size: large;
-    z-index: 10;
 
+button:hover {
+    background-color: rgba(0, 136, 169, 0.8);
 }
-.dropdown-menu a {
-    background-color:#000000;
-    color:rgba(1,136,169,1);;
-    padding: 1em;
-    text-decoration: none;
-    display: block;
-    font-size: large;
-}.dropdown-menu a:hover{
-    background-color:black;
-    font-size: x-large;
-} .right-menu:hover .dropdown-menu 
-{
-    display: block;
-    font-size: x-large;
-}
-.right-menu:hover .menu-button{
-    color:#0088a9;
-    font-size: large;
-}
-.presentation{
-    width: 75%;
+
+/* Media Queries for Responsive Design */
+
+/* For screens smaller than 768px (e.g., mobile phones) */
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .nav__links {
+        margin-top: 20px;
+    }
+
+    .nav__links li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .logo {
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .rightcontent {
+        width: 100%;
+        margin: 20px;
+        font-size: 16px;
+    }
+
+    .footer {
+        margin-left: 0;
+        top: auto;
+        padding: 20px 0;
+        text-align: center;
+    }
     
-}
-.content-photo{
-    margin: 20px;
-    float: left;
-}
-h2{
-    margin-bottom: 0%;
-    padding: 2%;
-}
-.display{
-    clear: both;
-    width: auto;
-}
-.container{
-    display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-}
-#price{
-    justify-content: center;
-    background-color: white;
-    color: #24252A ;
-    font-size: 30px;
-    text-align: center;
-    width: 100px;
-    float: left;
-    border-radius: 40px;
-    margin-left: 35%;
-}
-#price-1{
-    justify-content: center;
-    background-color: white;
-    color: #24252A ;
-    font-size: 30px;
-    text-align: center;
-    width: 100px;
-    float: left;
-    margin-left: 35%;
-    border-radius: 40px;
-}
-#price-2{
-    justify-content: center;
-    background-color: white;
-    color: #24252A ;
-    font-size: 30px;
-    text-align: center;
-    width: 100px;
-    float: left;
-    margin-left: 35%;
-    border-radius: 40px;
-}
-#buy-now{
-    margin-top: 3px;
-    justify-content: center;
-    border-radius: 30px;
-}
-.card{
-    background-color:white;
-    width: 50%;
-    height: auto;
-    margin: 20px;
-    border-radius: 15px;
-}
-.card-image{
-    height: 250px;
-    background-size: cover;
-    border-radius: 15px 15px 0 0 ;
-}
-.car-1{
-    background-image: url(https://cdn.pixabay.com/photo/2017/08/07/14/02/man-2604149__340.jpg);
-}
-.car-2
-{
-    background-image: url(https://st2.depositphotos.com/3927429/8215/i/450/depositphotos_82158134-stock-photo-athletic-man-and-woman-with.jpg);
-}
-.car-3
-{
-    background-image: url(https://thumbs.dreamstime.com/b/muscular-athletic-bodybuilder-fitness-model-posing-exercis-weights-exercises-gym-64856941.jpg);
-}
-p{
-    color: rgb(255, 255, 255);
-}
-.card a{
-    background-color:red;
-    padding: 15px 20px;
-    display: block;
-    text-align: center;
-    margin: 20px 50px;
-}
-.card:hover{
-    background-color: #0088a9;
-    cursor: pointer;
-    transform: scale(1.05);
-    transition: all 0.5s ease;
+    /* Add more responsive styles as needed */
 }
 
-#elite
-{
-   margin-top: 30px;
-   margin-bottom: 55px;
-   margin-left: 75px;
-   padding-top: 60px;
-   padding-bottom: 60px;
-   padding-left: 70px;
-   padding-right: 70px;
-   background-color: rgb(0, 0, 0);
-   border-radius: 40px;
+/* For screens between 768px and 1200px (e.g., tablets) */
+@media (min-width: 769px) and (max-width: 1200px) {
+    /* Add specific styles for this range */
 }
 
-
-
-
-
-/* FOOTTTTTTTTTTTTTTTTTTTER*/
-
-
-
-
-.footer{
-    margin-left: 59%;
-    position: absolute;
-    top: 3850px;
-    background-color: #24262b;
-    padding: 70px 0px;
+/* For screens larger than 1200px (e.g., desktops) */
+@media (min-width: 1201px) {
+    /* Add specific styles for this range */
 }
-.footer-col{
-    width: 25%;
-    padding-right: 50px;
-}
-.footer-col h4{
-    font-size: 18px;
-    color: #ffffff;
-    text-transform: capitalize;
-    margin: bottom 30px; 
-    font-weight: 500;
-    position: relative;
-}
-.footer-col h4::before{
-    content: '';
-    position: absolute;
-    left: 20px;
-    bottom: -10px;
-    background-color: #e91e63;
-    height: 2px;
-    box-sizing: border-box;
-    width: 50px;
-}
-.footer-col ul li:not(:last-child){
-    margin-bottom: 10px;
-}
-.footer-col ul li a{
-    font-size: 16px;
-    text-transform: capitalize;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 300;
-    color: #bbbbbb;
-    display: block;
-}
-/* socila link fregrtgtrgtgegergergerg
-egtgetgergreg
-gtregggggg*/
-.fa-regular
-{
-    color:white; 
-    font-size: 22px;
-}
-.fa-solid
-{
-
-    color:white;
-    font-size: 22px;
-    padding-top: 50px;
-} .text2{
-    padding-top: 80px;
-    font-size: 25px;
-    padding-left: 50px;
-    float: left;
-}
-#number{
-    padding-left: 20px;
-}
-.leftcontent{
-    float:left;
-    font-size: 25px;
-    padding-top: 115px;
-    padding-left: 50px;
-}
-#number1{
-    padding-left: 10px;
-}
-#number2{
-    padding-left: 30px;
-}
-.fa-address-book
-{
-    color:white;
-}
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-.wrapper .button{
-  display: inline-block;
-  height: 60px;
-  width: 60px;
-  margin: 0 5px;
-  overflow: hidden;
-  background:white;
-  border-radius: 50px;
-  cursor: pointer;
-  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
-  transition: all 0.3s ease-out;
-}
-.wrapper .button:hover{
-  width: 200px;
-}
-.wrapper .button .icon{
-background-color: red;
-  display: inline-block;
-  height: 60px;
-  width: 60px;
-  text-align: center;
-  border-radius: 50px;
-  box-sizing: border-box;
-  line-height: 60px;
-  transition: all 0.3s ease-out;
-}
-.wrapper .button .icon i{
-background-color: #ff0000;
-  font-size: 25px;
-  line-height: 60px;
-  transition: all 0.3s ease-out;
-}
-.wrapper .button:hover .icon i{
-  color: #fff;
-}
-.wrapper .button span{
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 60px;
-  margin-left: 10px;
-  transition: all 0.3s ease-out;
-}
-.wrapper .button:nth-child(1) span{
-  color: red;
-}
-.wrapper .button:nth-child(2) span{
-  color: #1DA1F2;
-}
-.wrapper .button:nth-child(3) span{
-  color: #E1306C;
-}
-.wrapper .button:nth-child(4) span{
-  color: blue;
-}
-.wrapper .button:nth-child(5) span{
-  color: #ff0000;
-}
-.social{
-    position: absolute;
-    top: 4275px;
-    left:35%;
-}
-.fa-brands {
-    color: black;
-}
-.home{
-    position: absolute;
-    top: 425px;
-    left: 680px;
-}
-.mail{
-  color: white;
-  padding-left: 10px;
-  text-decoration: none;
-  font-size:x-large;
-}
-
